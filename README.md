@@ -1,5 +1,32 @@
 # IA-Siglo21 
 
+**modelo de Hopfield**
+
+Se presenta un ejemplo básico (modelo de Hopfield.cpp) de cómo se podría implementar un prototipo en C++
+para simular el modelo de Hopfield, considerando una imagen pequeña de 10x10 píxeles y
+utilizando el aprendizaje de Hebb.
+
+
+Main():
+Se definen dos patrones simples (imágenes) para entrenamiento.
+Se calcula la matriz de pesos a partir de esos patrones.
+Se utiliza un patrón de entrada ruidoso y se aplica el modelo de Hopfield para recuperar el
+patrón original.
+Finalmente, se muestra el patrón recuperado en la consola.
+
+Función calcularMatrizPesos():
+Calcula la matriz de pesos para la red de Hopfield usando la regla
+de aprendizaje de Hebb. Se omiten las conexiones entre neuronas individuales (sin autoconexión)
+poniendo la diagonal de la matriz en cero.
+Función actualizarPixel():
+Dada la matriz de pesos y el patrón actual, esta función calcula el nuevo
+valor de un píxel basado en la suma ponderada de las conexiones sinápticas y una función de
+activación con umbral.
+Función recuperarPatron():
+A partir de una imagen de entrada (que puede tener ruido), esta
+función recupera el patrón original. La recuperación se realiza actualizando los píxeles
+iterativamente hasta que el patrón se estabilice.
+
 **Búsqueda exaustiva**
 
 verificarPosicion(): Esta función simula el sensor del robot, verificando si la posición actual está dentro de la tolerancia del objetivo.
